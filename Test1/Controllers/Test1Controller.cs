@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Common;
 
 namespace Test1.Controllers
 {
@@ -12,6 +13,8 @@ namespace Test1.Controllers
         // GET: /Test1/
         public ActionResult Index(string name, int id = 0)
         {
+            var a = "aaa";
+            a.PrintString();
             return View();
         }
 

@@ -173,7 +173,12 @@
     <Content Include="Views\CeShi\Edit.cshtml" />
     <Content Include="Views\CeShi\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ba5accb3-f622-4a39-aa3c-d0986d0aeacd}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
