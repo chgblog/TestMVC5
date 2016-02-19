@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Common;
+using Test1.Models;
 
 namespace Test1.Controllers
 {
@@ -18,12 +19,15 @@ namespace Test1.Controllers
             return View();
         }
 
-        public ActionResult Submit(string name, int id = 0)
+        public ActionResult Submit()
         {
-            ViewBag.Name = name;
-            ViewBag.ID = id;
-            //return string.Format("<b>Hello {0}，你{1}岁了</b>", name, id);
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Submit(CeShi modCeShi)
+        {
+            return View("SubmitResult", modCeShi);
         }
 	}
 }

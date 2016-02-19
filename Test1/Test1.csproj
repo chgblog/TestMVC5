@@ -172,6 +172,7 @@
     <Content Include="Views\CeShi\Details.cshtml" />
     <Content Include="Views\CeShi\Edit.cshtml" />
     <Content Include="Views\CeShi\Index.cshtml" />
+    <Content Include="Views\Test1\SubmitResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
