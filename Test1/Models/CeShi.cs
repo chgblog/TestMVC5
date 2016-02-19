@@ -11,6 +11,12 @@ namespace Test1.Models
 
     public class CeShiDBContext : DbContext
     {
+        public CeShiDBContext()
+            : base("ConnectionString")
+        {
+
+        }
+
         public DbSet<CeShi> CeShis { get; set; }
     }
 }
