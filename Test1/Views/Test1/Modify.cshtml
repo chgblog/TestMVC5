@@ -1,0 +1,11 @@
+﻿@model Common.Models.Exam_e_CourseInfo
+
+<h2>修改</h2>
+
+<div>
+    <form name="form1" action="/Test1/Modify" method="post">
+        课程代码: <input id="txtCourseCode" name="CourseCode" value="@Model.CourseCode" readonly="readonly" /><br />
+        课程名称: <input id="txtCourseName" name="CourseName" value="@Model.CourseName" /> @Html.ValidationMessage("CourseName") <br />
+        <input type="submit" name="btnTiJiao" value="提交" />
+    </form>
+</div>

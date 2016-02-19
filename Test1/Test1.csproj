@@ -118,7 +118,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\List\" />
-    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -173,6 +172,8 @@
     <Content Include="Views\CeShi\Edit.cshtml" />
     <Content Include="Views\CeShi\Index.cshtml" />
     <Content Include="Views\Test1\SubmitResult.cshtml" />
+    <Content Include="Views\Test1\Modify.cshtml" />
+    <Content Include="Views\Test1\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
