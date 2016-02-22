@@ -51,12 +51,17 @@ namespace Test1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            else
+            {
+                ViewBag.ErrorInfo = "信息验证失败";
+                return View(modKeCheng);
+            }
             return View(modKeCheng);
         }
 
         public ActionResult Submit()
         {
-            return View();
+            return PartialView();
         }
 
         [HttpPost]
