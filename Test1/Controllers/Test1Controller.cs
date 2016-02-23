@@ -14,11 +14,14 @@ namespace Test1.Controllers
     public class Test1Controller : Controller
     {
         private clsConn.ConnDBContext db = new clsConn.ConnDBContext();
+        private CeShiDBContext dbCeShi = new CeShiDBContext();
 
         //
         // GET: /Test1/
         public ActionResult Index(string name, int id = 0)
         {
+            var arrCeShi = dbCeShi.CeShis.ToList();
+
             var arrKeCheng = (from kecheng in db.Exam_e_CourseInfo select kecheng).Take(10);
             return View(arrKeCheng.ToList());
         }

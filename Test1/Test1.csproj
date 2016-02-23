@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Models\CeShi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\StudentModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -176,6 +177,7 @@
     <Content Include="Views\Test1\Error.cshtml" />
     <Content Include="Views\Test1\InnerError.cshtml" />
     <Content Include="Views\CeShi\Test1.cshtml" />
+    <Content Include="Views\Shared\TestLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

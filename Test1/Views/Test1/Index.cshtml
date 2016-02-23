@@ -1,38 +1,43 @@
 ﻿@model IEnumerable<Common.Models.Exam_e_CourseInfo>
 
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/TestLayout.cshtml";
+    ViewBag.Title = "Index List";
 }
 
-<h2>Index</h2>
+@section ContentHeader{
+    <h2>@ViewBag.Title</h2>
+}
+@section ContentBody{
 
-<table class="table">
-    <tr>
-        <th>
-            课程代码
-        </th>
-        <th>
-            课程名称
-        </th>
-        <th>操作</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <table class="table">
         <tr>
-            <td>
-                @item.CourseCode
-            </td>
-            <td>
-                @item.CourseName
-            </td>
-            <td><a href="/Test1/Modify?KeChengDaiMa=@item.CourseCode">修改</a></td>
+            <th>
+                课程代码
+            </th>
+            <th>
+                课程名称
+            </th>
+            <th>操作</th>
         </tr>
-    }
 
-</table>
-@{
-    //var strSubmit = Html.Action("Submit");
-    //Response.Write(strSubmit);
-    Html.RenderAction("Submit");
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.CourseCode
+                </td>
+                <td>
+                    @item.CourseName
+                </td>
+                <td><a href="/Test1/Modify?KeChengDaiMa=@item.CourseCode">修改</a></td>
+            </tr>
+        }
+
+    </table>
+    @{
+        //var strSubmit = Html.Action("Submit");
+        //Response.Write(strSubmit);
+        Html.RenderAction("Submit");
+    }
 }
