@@ -1,0 +1,19 @@
+﻿@model HandleErrorInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        访问的地址不存在。<br />
+        Error Message :@Model.Exception.Message<br />
+    </div>
+</body>
+</html>

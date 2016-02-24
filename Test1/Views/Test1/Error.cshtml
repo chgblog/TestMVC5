@@ -1,6 +1,11 @@
-﻿
+﻿@model HandleErrorInfo
+
     <div>
-        <br /><br /><br />
-        出错了！@ViewBag.ErrorInfo <br /><br />
+        <br /><br />
+        出错了！ <br />
+        Error Message :@Model.Exception.Message<br />
+        Controller: @Model.ControllerName<br />
+        Action: @Model.ActionName<br />
+        <br />
         <a href="Index">返回</a>
     </div>

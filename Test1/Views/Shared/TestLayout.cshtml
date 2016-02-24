@@ -1,6 +1,4 @@
-﻿@model IEnumerable<Test1.Models.CeShi>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -9,32 +7,7 @@
 </head>
 <body>
     <div>@RenderSection("ContentHeader", false)</div>
-
-    <table class="table">
-        <tr>
-            <th>
-                姓名
-            </th>
-            <th>
-                年龄
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @item.XingMing
-                </td>
-                <td>
-                    @item.NianLing
-                </td>
-            </tr>
-        }
-    </table>
-
-    <div>@RenderSection("ContentBody")</div>
+    <div>@RenderBody()</div>
     <div>@RenderSection("ContentFooter", false)</div>
 </body>
 </html>
