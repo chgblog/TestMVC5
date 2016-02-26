@@ -1,0 +1,72 @@
+﻿
+@model Common.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div id="StudentList">
+        <div>学号：<span id="lblXueHao">@Model.XueHao</span></div>
+        <div>姓名：@Model.XingMing</div>
+        <div>年龄：@Model.NianLing</div>
+    </div>
+    <br />
+    <div>
+        <form id="form1">
+            <div>学号：<input type="text" id="txtXueHao" /></div>
+            <div>姓名：<input type="text" id="txtXingMing" /></div>
+            <div>年龄：<input type="text" id="txtNianLing" /></div>
+            <div>
+                <button id="btnTiJiao"> 提 交 </button>
+            </div>
+        </form>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <!--[if lt IE 8]><script src="~/Scripts/json2.js"></script><![endif]-->
+    <script type="text/javascript">
+        var student={
+            XueHao: "@Model.XueHao"
+            , XingMing: "@Model.XingMing"
+            , NianLing: "@Model.NianLing"
+        };
+
+        $(function () {
+            $("#btnTiJiao").bind("click", function(){
+                student.XueHao = $("#txtXueHao").val();
+                student.XingMing = $("#txtXingMing").val();
+                student.NianLing = $("#txtNianLing").val();
+                
+                if(student.NianLing && isNaN(student.NianLing))
+                {
+                    alert("年龄不是数值");
+                    return false
+                }
+                $.post('SaveStudent', student).then(function (rStudent) {
+                    console.log(rStudent);
+                    var newXueHao = $("<div></div>").text("学号：" + rStudent.XueHao);
+                    var newXingMing = $("<div></div>").text("姓名：" + rStudent.XingMing);
+                    var newNianLing = $("<div></div>").text("年龄：" + rStudent.NianLing);
+
+                    $("#StudentList").append("<br />").append(newXueHao).append(newXingMing).append(newNianLing);
+                });
+
+                return false;
+            });
+
+            var jsonStudent = JSON.stringify(student);
+            console.log(jsonStudent);
+            //alert(jsonStudent);
+            var objStudent = JSON.parse(jsonStudent);
+            console.log(objStudent);
+            //alert(student.XueHao + "," + student.XingMing + "," + student.NianLing);
+        });
+    </script>
+</body>
+</html>
