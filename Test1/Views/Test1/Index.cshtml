@@ -9,7 +9,15 @@
     <h2>@ViewBag.Title</h2>
 }
 
-<table class="table">
+<div>
+    MachineName: @ViewBag.MachineName<br />
+    DateStamp: @ViewBag.DateStamp<br />
+    Controller: @ViewBag.Controller<br />
+    Action: @ViewBag.Action<br />
+    TempData: @TempData["name"]<br />
+</div>
+
+@*<table class="table">
     <tr>
         <th>
             课程代码
@@ -33,7 +41,8 @@
         </tr>
     }
 
-</table>
+</table>*@
+
 @{
     //var strSubmit = Html.Action("Submit");
     //Response.Write(strSubmit);

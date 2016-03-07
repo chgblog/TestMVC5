@@ -20,10 +20,18 @@ namespace Test1.Controllers
         // GET: /Test1/
         public ActionResult Index(string name, int id = 0)
         {
+            ViewBag.MachineName = Server.MachineName;
+            ViewBag.DateStamp = HttpContext.Timestamp;
+            ViewBag.Controller = RouteData.Values["controller"];
+            ViewBag.Action = RouteData.Values["Action"];
+            TempData["name"] = "Temp Session";
+            /*
             var arrCeShi = dbCeShi.CeShis.ToList();
 
             var arrKeCheng = (from kecheng in db.Exam_e_CourseInfo select kecheng).Take(10);
-            return View(arrKeCheng.ToList());
+            */
+            //return View();
+            return new RedirectResult("~/Test1/Submit");
         }
 
         [HandleError]
