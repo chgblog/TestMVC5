@@ -1,4 +1,6 @@
 ﻿using System.Data.Entity;
+using System.Web.UI;
+using Test1.Common;
 
 namespace Test1.Models
 {

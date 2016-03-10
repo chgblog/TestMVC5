@@ -10,6 +10,7 @@ namespace Test1
         {
             filters.Add(new HandleErrorAttribute());
             filters.Add(new JiShiAttribute());
+            filters.Add(new ZiDingYiCache());
         }
     }
 }

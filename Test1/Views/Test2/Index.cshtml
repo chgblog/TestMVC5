@@ -12,7 +12,10 @@
 </head>
 <body>
     <div>
-        i=@Model
+        i=@Model<br />
+        Index Time：@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")
+
+        @{Html.RenderPartial("View");}
     </div>
 </body>
 </html>
