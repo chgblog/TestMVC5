@@ -127,11 +127,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\XueJi\Controllers\JsonController.cs" />
     <Compile Include="Areas\XueJi\XueJiAreaRegistration.cs" />
+    <Compile Include="Common\JiShiAttribute.cs" />
     <Compile Include="Controllers\CeShiController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Controllers\Test1Controller.cs" />
+    <Compile Include="Controllers\Test2Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,6 +189,7 @@
     <Content Include="Views\CeShi\Test1.cshtml" />
     <Content Include="Views\Shared\TestLayout.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Test2\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
