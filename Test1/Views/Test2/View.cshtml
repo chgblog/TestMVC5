@@ -1,7 +1,6 @@
 ﻿@{
     Layout = null;
 }
-@model int
 
 <!DOCTYPE html>
 
@@ -12,11 +11,8 @@
 </head>
 <body>
     <div>
-        i=@Model<br />
-        Index Time：@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")
-
-        @Html.Partial("SubView")
-        @Html.Action("View")
+        @this.ViewBag.Title<br />
+        View Time：@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")<br />
     </div>
 </body>
 </html>

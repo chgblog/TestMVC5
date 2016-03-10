@@ -127,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\XueJi\Controllers\JsonController.cs" />
     <Compile Include="Areas\XueJi\XueJiAreaRegistration.cs" />
+    <Compile Include="Common\CustomHelpers.cs" />
     <Compile Include="Common\JiShiAttribute.cs" />
     <Compile Include="Common\ZiDingYiCache.cs" />
     <Compile Include="Controllers\CeShiController.cs" />
@@ -192,6 +193,7 @@
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Test2\Index.cshtml" />
     <Content Include="Views\Test2\View.cshtml" />
+    <Content Include="Views\Test2\SubView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
@@ -224,7 +226,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59989</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59989/</IISUrl>
+          <IISUrl>http://localhost:59988/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
