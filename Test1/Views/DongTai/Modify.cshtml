@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+@using System.Reflection
+@model System.Collections.IEnumerable
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>修改课程信息</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @{
+            if (Model == null)
+            {
+                Response.Write("没有数据<br />");
+            }
+            else
+            {
+                foreach (dynamic item in Model)
+                {
+                    PropertyInfo[] columns = item.GetType().GetProperties();
+                    foreach (PropertyInfo column in columns)
+                    {
+                        Response.Write(column.Name + "：<input type='text' value='" + column.GetValue(item, null) + "' /><br />");
+                    }
+                    Response.Write("<br/ ><br />");
+                }
+            }
+        }
+
+    </div>
+}
+    </div>
+</body>
+</html>

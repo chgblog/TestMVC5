@@ -1,6 +1,7 @@
 ﻿@{
     Layout = null;
 }
+@using System.Reflection
 @model System.Collections.IEnumerable
 
 <!DOCTYPE html>
@@ -36,5 +37,25 @@
             }
         </table>
     </div>
+
+    @{
+        if (Model == null)
+        {
+            Response.Write("没有数据<br />");
+        }
+        else
+        {
+            foreach (dynamic item in Model)
+            {
+                PropertyInfo[] propertys = item.GetType().GetProperties();
+                foreach (PropertyInfo pinfo in propertys)
+                {
+                    Response.Write("<br>" + pinfo.Name + "," + pinfo.GetValue(item, null));
+                }
+                Response.Write("<br/ ><br />");
+            }
+        }
+    }
+
 </body>
 </html>

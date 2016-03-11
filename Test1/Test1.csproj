@@ -196,6 +196,7 @@
     <Content Include="Views\Test2\View.cshtml" />
     <Content Include="Views\Test2\SubView.cshtml" />
     <Content Include="Views\DongTai\Index.cshtml" />
+    <Content Include="Views\DongTai\Modify.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
