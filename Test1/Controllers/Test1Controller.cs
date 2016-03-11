@@ -37,13 +37,11 @@ namespace Test1.Controllers
         [HandleError]
         public ActionResult Modify(string KeChengDaiMa)
         {
-            /*
             if (string.IsNullOrEmpty(KeChengDaiMa))
             {
                 ViewBag.ErrorInfo = "参数错误";
                 return View("Error");
             }
-            */
             var modKeCheng = db.Exam_e_CourseInfo.Where(KeCheng => KeCheng.CourseCode == KeChengDaiMa).First();
             if (modKeCheng == null)
             {
@@ -54,6 +52,7 @@ namespace Test1.Controllers
             {
                 return View(modKeCheng);
             }
+            return View();
         }
 
         [HttpPost]

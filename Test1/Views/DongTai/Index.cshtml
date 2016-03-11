@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+@model System.Collections.IEnumerable
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    课程代码
+                </th>
+                <th>
+                    课程名称
+                </th>
+                <th>操作</th>
+            </tr>
+            @foreach (dynamic item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.CourseCode
+                    </td>
+                    <td>
+                        @item.CourseName
+                    </td>
+                    <td><a href="Modify?KeChengDaiMa=@item.CourseCode">修改</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

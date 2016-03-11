@@ -11,7 +11,7 @@ namespace Test1.Common
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             this.Duration = 600;
-            this.Location = System.Web.UI.OutputCacheLocation.Any;
+            this.Location = System.Web.UI.OutputCacheLocation.Client;
             filterContext.HttpContext.Response.Cache.SetOmitVaryStar(true);
         }
     }

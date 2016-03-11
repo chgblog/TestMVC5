@@ -131,6 +131,7 @@
     <Compile Include="Common\JiShiAttribute.cs" />
     <Compile Include="Common\ZiDingYiCache.cs" />
     <Compile Include="Controllers\CeShiController.cs" />
+    <Compile Include="Controllers\DongTaiController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListController.cs" />
@@ -194,6 +195,7 @@
     <Content Include="Views\Test2\Index.cshtml" />
     <Content Include="Views\Test2\View.cshtml" />
     <Content Include="Views\Test2\SubView.cshtml" />
+    <Content Include="Views\DongTai\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
