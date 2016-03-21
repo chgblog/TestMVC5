@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Common.Models.Exam_e_CourseInfo>
+﻿@model IEnumerable<Common.ViewModels.Exam_e_CourseInfo>
 
 @{
     Layout = "~/Views/Shared/TestLayout.cshtml";
@@ -17,7 +17,7 @@
     TempData: @TempData["name"]<br />
 </div>
 
-@*<table class="table">
+<table class="table">
     <tr>
         <th>
             课程代码
@@ -41,8 +41,9 @@
         </tr>
     }
 
-</table>*@
+</table>
 
+@DateTime.Now
 @{
     //var strSubmit = Html.Action("Submit");
     //Response.Write(strSubmit);

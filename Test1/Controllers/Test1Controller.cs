@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Common;
 using Test1.Models;
-using Common.Models;
+using Common.ViewModels;
 using System.Net;
 using System.Data.Entity;
 
@@ -25,13 +25,13 @@ namespace Test1.Controllers
             ViewBag.Controller = RouteData.Values["controller"];
             ViewBag.Action = RouteData.Values["Action"];
             TempData["name"] = "Temp Session";
+
             /*
             var arrCeShi = dbCeShi.CeShis.ToList();
-
-            var arrKeCheng = (from kecheng in db.Exam_e_CourseInfo select kecheng).Take(10);
             */
-            //return View();
-            return new RedirectResult("~/Test1/Submit");
+            var arrKeCheng = (from kecheng in db.Exam_e_CourseInfo select kecheng).Take(10);
+            return View(arrKeCheng);
+            //return new RedirectResult("~/Test1/Submit");
         }
 
         [HandleError]

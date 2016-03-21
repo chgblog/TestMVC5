@@ -128,6 +128,7 @@
     <Compile Include="Areas\XueJi\Controllers\JsonController.cs" />
     <Compile Include="Areas\XueJi\XueJiAreaRegistration.cs" />
     <Compile Include="Common\CustomHelpers.cs" />
+    <Compile Include="Common\GuoLvModelBinder.cs" />
     <Compile Include="Common\JiShiAttribute.cs" />
     <Compile Include="Common\ZiDingYiCache.cs" />
     <Compile Include="Controllers\CeShiController.cs" />

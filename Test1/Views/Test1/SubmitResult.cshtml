@@ -5,5 +5,8 @@
 <div>
         ID: @Model.ID<br />
         NianLing: @Model.NianLing<br />
-        XingMing: @Model.XingMing<br />
+        XingMing: @foreach (string strXingMing in Model.XingMing)
+                  {
+                      @strXingMing 
+                  } <br />
 </div>
