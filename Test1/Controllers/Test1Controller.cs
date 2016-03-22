@@ -80,6 +80,7 @@ namespace Test1.Controllers
         [HttpPost]
         public ActionResult Submit(CeShi modCeShi)
         {
+            modCeShi = modCeShi ?? new CeShi();
             return View("SubmitResult", modCeShi);
         }
 	}

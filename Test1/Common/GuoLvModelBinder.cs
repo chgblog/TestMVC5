@@ -10,6 +10,7 @@ namespace Test1.Common
 {
     public class GuoLvModelBinder : DefaultModelBinder
     {
+        /*
         protected override void SetProperty(ControllerContext controllerContext, ModelBindingContext bindingContext
                                             , PropertyDescriptor propertyDescriptor, object objValue)
         {
@@ -23,6 +24,7 @@ namespace Test1.Common
             }
             base.SetProperty(controllerContext, bindingContext, propertyDescriptor, objValue);
         }
+        */
 
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {

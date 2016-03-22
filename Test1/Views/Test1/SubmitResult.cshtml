@@ -1,4 +1,5 @@
-﻿@model Test1.Models.CeShi
+﻿@using Common.ViewModels;
+@model Test1.Models.CeShi
 
 <h2>Submit Result</h2>
 
@@ -9,4 +10,11 @@
                   {
                       @strXingMing 
                   } <br />
+        CourseList:<br />
+        <ul>
+            @foreach (Exam_e_CourseInfo course in Model.CourseList)
+            {
+                <li>@course.CourseCode, @course.CourseName</li>
+            }
+        </ul>
 </div>
