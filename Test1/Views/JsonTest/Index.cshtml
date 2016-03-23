@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<input type="button" id="btnGetCourse" value="获取课程" />
+
+<div id="divCourse"></div>
+
+@section scripts{
+<script type="text/javascript">
+    $("#btnGetCourse").bind("click", function () {
+        $.ajax({
+            type: "Post",
+            url: "GetCourses",
+            data: "KeChengDaiMa=acc201a",
+            dataType: "json",
+            cache: false,
+            success: function (data) {
+                if (data == null || typeof (data) != "object") {
+                    alert("获取课程失败。");
+                    return false;
+                }
+                console.log("data=" + data);
+                for(var i=0;i<data.length;i++)
+                {
+                    $("#divCourse").append("<div>" + data[i].CourseCode + " - " + data[i].CourseName + "</div>")
+                }
+            },
+            error: function (err) {
+                console.log("status=" + err.status);
+                console.log("responseText=" + err.responseText);
+                return false;
+            }
+        });
+        return false;
+    });
+</script>
+}

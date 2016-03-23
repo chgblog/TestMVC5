@@ -17,8 +17,7 @@ namespace Test1.Common
         public override void OnResultExecuted(ResultExecutedContext filterContext)
         {
             timer.Stop();
-            filterContext.HttpContext.Response.Write(
-            string.Format("<div>执行时间: {0}</div>", timer.Elapsed.TotalSeconds));
+            filterContext.HttpContext.Response.AppendHeader("Timer", timer.Elapsed.TotalSeconds.ToString());
         } 
     }
 }
