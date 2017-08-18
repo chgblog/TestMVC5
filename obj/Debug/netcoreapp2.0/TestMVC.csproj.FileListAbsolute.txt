@@ -1,0 +1,10 @@
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\bin\Debug\netcoreapp2.0\TestMVC.deps.json
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\bin\Debug\netcoreapp2.0\TestMVC.runtimeconfig.json
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\bin\Debug\netcoreapp2.0\TestMVC.runtimeconfig.dev.json
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\bin\Debug\netcoreapp2.0\TestMVC.dll
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\bin\Debug\netcoreapp2.0\TestMVC.pdb
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\obj\Debug\netcoreapp2.0\TestMVC.csproj.CoreCompileInputs.cache
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\obj\Debug\netcoreapp2.0\TestMVC.AssemblyInfoInputs.cache
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\obj\Debug\netcoreapp2.0\TestMVC.AssemblyInfo.cs
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\obj\Debug\netcoreapp2.0\TestMVC.dll
+E:\CHG\编程\ASP.NET\测试\Core\TestMVC\TestMVC\obj\Debug\netcoreapp2.0\TestMVC.pdb
